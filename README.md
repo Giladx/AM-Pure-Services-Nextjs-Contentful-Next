@@ -1,0 +1,1 @@
+# AM-Pure-Services-Nextjs-Contentful-Next
