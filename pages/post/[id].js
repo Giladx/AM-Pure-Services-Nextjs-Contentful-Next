@@ -9,8 +9,8 @@ import Navigation from '../../components/navigation'
 import Blog from '../../components/blog'
 import Banner from '../../components/banner'
 import Footer from '../../components/footer'
-import postPageInitialPathsBe6daResource from '../../resources/post-page-initial-paths-be6da'
-import postPageInitialProps739ecResource from '../../resources/post-page-initial-props-739ec'
+import postPageInitialPathsAffadResource from '../../resources/post-page-initial-paths-affad'
+import postPageInitialProps5f886Resource from '../../resources/post-page-initial-props-5f886'
 
 const Post = (props) => {
   return (
@@ -129,19 +129,12 @@ const Post = (props) => {
             object-fit: cover;
           }
           .post-container2 {
-            width: 100%;
             font-size: 20px;
-            align-self: stretch;
             font-family: 'Rubik';
-            white-space: pre-wrap;
           }
           .post-image1 {
             width: 100%;
             object-fit: cover;
-          }
-          .post-container3 {
-            width: 100%;
-            align-self: stretch;
           }
           .post-image2 {
             width: 100%;
@@ -149,7 +142,6 @@ const Post = (props) => {
           }
           .post-container4 {
             width: 100%;
-            align-self: stretch;
           }
           @media (max-width: 1600px) {
             .post-text {
@@ -164,9 +156,6 @@ const Post = (props) => {
             }
             .post-image {
               width: auto;
-            }
-            .post-container2 {
-              white-space: nowrap;
             }
             .post-image1 {
               width: 100%;
@@ -198,7 +187,7 @@ export default Post
 
 export async function getStaticPaths() {
   try {
-    const response = await postPageInitialPathsBe6daResource({
+    const response = await postPageInitialPathsAffadResource({
       content_type: 'post',
       select: 'sys.id',
     })
@@ -222,7 +211,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   try {
-    const response = await postPageInitialProps739ecResource({
+    const response = await postPageInitialProps5f886Resource({
       ...context?.params,
     })
     if (!response?.data?.[0]) {
