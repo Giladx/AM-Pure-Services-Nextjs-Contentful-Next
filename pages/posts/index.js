@@ -8,7 +8,7 @@ import PropTypes from 'prop-types'
 import Navigation from '../../components/navigation'
 import Banner from '../../components/banner'
 import Footer from '../../components/footer'
-import postPageInitialPropsD9878Resource from '../../resources/post-page-initial-props-d9878'
+import postPageInitialProps9a964Resource from '../../resources/post-page-initial-props-9a964'
 
 const Post1 = (props) => {
   return (
@@ -292,7 +292,7 @@ export default Post1
 
 export async function getStaticProps(context) {
   try {
-    const response = await postPageInitialPropsD9878Resource({
+    const response = await postPageInitialProps9a964Resource({
       ...context?.params,
     })
     if (!response) {
@@ -305,6 +305,7 @@ export async function getStaticProps(context) {
         postEntities: response,
         ...response?.meta,
       },
+      revalidate: 60,
     }
   } catch (error) {
     return {

@@ -54,11 +54,13 @@ const BlogCMS = (props) => {
                                 </span>
                               </button>
                               <span className="blog-cms-text07">
+                                {[0]?.date}
                                 {context_crvlg?.date}
                               </span>
                             </div>
                             <span className="blog-cms-text08">
                               {context_crvlg?.title}
+                              {[0]?.title}
                             </span>
                             <span>{props.text1}</span>
                           </div>
@@ -211,20 +213,20 @@ const BlogCMS = (props) => {
 
 BlogCMS.defaultProps = {
   text: 'from blog',
-  imagealt: 'clean air duct',
-  text1: 'Read More',
   rootClassName: '',
-  text2: 'Previous',
+  imagealt: 'clean air duct',
   text3: 'Next',
+  text1: 'Read More',
+  text2: 'Previous',
 }
 
 BlogCMS.propTypes = {
   text: PropTypes.string,
-  imagealt: PropTypes.string,
-  text1: PropTypes.string,
   rootClassName: PropTypes.string,
-  text2: PropTypes.string,
+  imagealt: PropTypes.string,
   text3: PropTypes.string,
+  text1: PropTypes.string,
+  text2: PropTypes.string,
 }
 
 export default BlogCMS

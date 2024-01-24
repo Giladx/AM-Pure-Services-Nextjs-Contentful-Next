@@ -9,8 +9,8 @@ import Navigation from '../../components/navigation'
 import Blog from '../../components/blog'
 import Banner from '../../components/banner'
 import Footer from '../../components/footer'
-import postPageInitialPathsEc6faResource from '../../resources/post-page-initial-paths-ec6fa'
-import postPageInitialPropsD9a4aResource from '../../resources/post-page-initial-props-d9a4a'
+import postPageInitialPathsEe62aResource from '../../resources/post-page-initial-paths-ee62a'
+import postPageInitialProps68a92Resource from '../../resources/post-page-initial-props-68a92'
 
 const Post = (props) => {
   return (
@@ -187,7 +187,7 @@ export default Post
 
 export async function getStaticPaths() {
   try {
-    const response = await postPageInitialPathsEc6faResource({
+    const response = await postPageInitialPathsEe62aResource({
       content_type: 'post',
       select: 'fields.slug',
     })
@@ -211,7 +211,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   try {
-    const response = await postPageInitialPropsD9a4aResource({
+    const response = await postPageInitialProps68a92Resource({
       ...context?.params,
     })
     if (!response?.data?.[0]) {
@@ -224,6 +224,7 @@ export async function getStaticProps(context) {
         postEntity: response?.data?.[0],
         ...response?.meta,
       },
+      revalidate: 60,
     }
   } catch (error) {
     return {
