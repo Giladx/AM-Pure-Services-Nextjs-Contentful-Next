@@ -8,8 +8,8 @@ import PropTypes from 'prop-types'
 import Navigation from '../../../components/navigation'
 import Banner from '../../../components/banner'
 import Footer from '../../../components/footer'
-import postPageInitialPaths4c6eaResource from '../../../resources/post-page-initial-paths-4c6ea'
-import postPageInitialPropsDf480Resource from '../../../resources/post-page-initial-props-df480'
+import postPageInitialPaths103e6Resource from '../../../resources/post-page-initial-paths-103e6'
+import postPageInitialPropsE36b9Resource from '../../../resources/post-page-initial-props-e36b9'
 
 const Post11 = (props) => {
   return (
@@ -42,7 +42,7 @@ const Post11 = (props) => {
         <div className="post11-posts-componnets">
           <div className="post11-container1">
             <span className="post11-text03">from blog</span>
-            <h2 className="post11-text04 Heading2">
+            <h2 className="post11-text04">
               <span>Our Services</span>
               <br></br>
             </h2>
@@ -60,7 +60,10 @@ const Post11 = (props) => {
                             <div className="post11-blog-card">
                               <img
                                 alt="clean air duct"
-                                src={PostEntities?.coverImage?.url}
+                                src={
+                                  PostEntities?.coverImage?.url ||
+                                  'https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/2ebd7c56-845b-432a-9ccd-239e62f0733d/dbcd9cd3-bed8-454a-b81b-2a33e9433078?org_if_sml=1&q=80&force_format=original'
+                                }
                                 loading="lazy"
                                 className="post11-image"
                               />
@@ -159,8 +162,15 @@ const Post11 = (props) => {
             text-transform: uppercase;
           }
           .post11-text04 {
+            font-size: 46px;
+            font-style: normal;
             text-align: center;
+            font-family: Rubik;
+            font-weight: 900;
+            line-height: px;
             margin-bottom: var(--dl-space-space-unit);
+            letter-spacing: 0.01em;
+            text-decoration: none;
           }
           .post11-container2 {
             width: auto;
@@ -283,7 +293,7 @@ export default Post11
 
 export async function getStaticPaths() {
   try {
-    const response = await postPageInitialPaths4c6eaResource({
+    const response = await postPageInitialPaths103e6Resource({
       content_type: 'post',
     })
     const totalCount = response?.meta?.pagination?.total
@@ -311,7 +321,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   try {
-    const response = await postPageInitialPropsDf480Resource({
+    const response = await postPageInitialPropsE36b9Resource({
       ...context?.params,
       skip: (context.params.page - 1) * 10,
     })

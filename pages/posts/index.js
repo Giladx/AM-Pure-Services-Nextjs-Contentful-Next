@@ -8,7 +8,7 @@ import PropTypes from 'prop-types'
 import Navigation from '../../components/navigation'
 import Banner from '../../components/banner'
 import Footer from '../../components/footer'
-import postPageInitialProps884f4Resource from '../../resources/post-page-initial-props-884f4'
+import postPageInitialProps8099fResource from '../../resources/post-page-initial-props-8099f'
 
 const Post1 = (props) => {
   return (
@@ -41,7 +41,7 @@ const Post1 = (props) => {
         <div className="post1-posts-componnets">
           <div className="post1-container1">
             <span className="post1-text03">from blog</span>
-            <h2 className="post1-text04 Heading2">
+            <h2 className="post1-text04">
               <span>Our Services</span>
               <br></br>
             </h2>
@@ -59,7 +59,10 @@ const Post1 = (props) => {
                             <div className="post1-blog-card">
                               <img
                                 alt="clean air duct"
-                                src={PostEntities?.coverImage?.url}
+                                src={
+                                  PostEntities?.coverImage?.url ||
+                                  'https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/2ebd7c56-845b-432a-9ccd-239e62f0733d/dbcd9cd3-bed8-454a-b81b-2a33e9433078?org_if_sml=1&q=80&force_format=original'
+                                }
                                 loading="lazy"
                                 className="post1-image"
                               />
@@ -158,8 +161,15 @@ const Post1 = (props) => {
             text-transform: uppercase;
           }
           .post1-text04 {
+            font-size: 46px;
+            font-style: normal;
             text-align: center;
+            font-family: Rubik;
+            font-weight: 900;
+            line-height: px;
             margin-bottom: var(--dl-space-space-unit);
+            letter-spacing: 0.01em;
+            text-decoration: none;
           }
           .post1-container2 {
             width: auto;
@@ -282,7 +292,7 @@ export default Post1
 
 export async function getStaticProps(context) {
   try {
-    const response = await postPageInitialProps884f4Resource({
+    const response = await postPageInitialProps8099fResource({
       ...context?.params,
     })
     if (!response) {
