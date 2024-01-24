@@ -10,7 +10,7 @@ const BlogCMS = (props) => {
       <div className={`blog-cms-container ${props.rootClassName} `}>
         <div className="blog-cms-container1">
           <span className="blog-cms-text">{props.text}</span>
-          <h2 className="blog-cms-text01 Heading2">
+          <h2 className="blog-cms-text01">
             <span>Our Services</span>
             <br></br>
           </h2>
@@ -106,8 +106,15 @@ const BlogCMS = (props) => {
             text-transform: uppercase;
           }
           .blog-cms-text01 {
+            font-size: 46px;
+            font-style: normal;
             text-align: center;
+            font-family: Rubik;
+            font-weight: 900;
+            line-height: px;
             margin-bottom: var(--dl-space-space-unit);
+            letter-spacing: 0.01em;
+            text-decoration: none;
           }
           .blog-cms-container2 {
             width: auto;

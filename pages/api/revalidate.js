@@ -2,11 +2,6 @@ import { revalidate } from '@teleporthq/cms-mappers/contentful/revalidate'
 
 export default async function handler(req, res) {
   try {
-    if (process.env.WEBHOOK_SECRET !== req.query['WEBHOOK_SECRET']) {
-      return res.status(401).json({
-        revalidated: false,
-      })
-    }
     await revalidate(req, async (data, contentType) => {
       switch (contentType) {
         case 'post': {
