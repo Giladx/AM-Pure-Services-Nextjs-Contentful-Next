@@ -7,7 +7,7 @@ export default async function handler(req, res) {
         case 'post': {
           try {
             await res.revalidate(`/post/${data.slug}`)
-            await res.revalidate(`/post`)
+            await res.revalidate(`/posts`)
           } catch (error) {
             console.log('Failed in clearing cache')
             console.log(error)

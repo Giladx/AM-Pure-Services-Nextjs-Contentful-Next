@@ -9,8 +9,8 @@ import Navigation from '../../components/navigation'
 import Blog from '../../components/blog'
 import Banner from '../../components/banner'
 import Footer from '../../components/footer'
-import postPageInitialPaths39770Resource from '../../resources/post-page-initial-paths-39770'
-import postPageInitialPropsDfba6Resource from '../../resources/post-page-initial-props-dfba6'
+import postPageInitialPathsE9190Resource from '../../resources/post-page-initial-paths-e9190'
+import postPageInitialProps4449bResource from '../../resources/post-page-initial-props-4449b'
 
 const Post = (props) => {
   return (
@@ -187,7 +187,7 @@ export default Post
 
 export async function getStaticPaths() {
   try {
-    const response = await postPageInitialPaths39770Resource({
+    const response = await postPageInitialPathsE9190Resource({
       content_type: 'post',
       select: 'fields.slug',
     })
@@ -211,7 +211,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   try {
-    const response = await postPageInitialPropsDfba6Resource({
+    const response = await postPageInitialProps4449bResource({
       ...context?.params,
     })
     if (!response?.data?.[0]) {

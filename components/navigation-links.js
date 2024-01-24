@@ -12,7 +12,7 @@ const NavigationLinks = (props) => {
             {props.link1}
           </a>
         </Link>
-        <Link href="/post">
+        <Link href="/posts">
           <a className="navigation-links-link1 Navigation-LinkLaptopMobile">
             {props.link2}
           </a>
