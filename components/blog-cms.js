@@ -37,7 +37,7 @@ const BlogCMS = (props) => {
                   items={params}
                   renderItem={(context_crvlg) => (
                     <>
-                      <Link href={`/post/${context_crvlg?.slug}`}>
+                      <Link href={`/services/${context_crvlg?.slug}`}>
                         <a>
                           <div className="blog-cms-blog-card">
                             <img

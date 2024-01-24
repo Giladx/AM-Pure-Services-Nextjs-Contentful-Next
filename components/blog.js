@@ -16,7 +16,7 @@ const Blog = (props) => {
             <br></br>
           </h2>
           <div className="blog-blog-cards-container">
-            <Link href="/post">
+            <Link href="/services">
               <a className="blog-link">
                 <BlogCard
                   text="Read More"

@@ -4,8 +4,8 @@ import Head from 'next/head'
 import { DataProvider, Repeater } from '@teleporthq/react-components'
 import PropTypes from 'prop-types'
 
-import authorPageInitialPaths18981Resource from '../../resources/author-page-initial-paths-18981'
-import authorPageInitialProps0a748Resource from '../../resources/author-page-initial-props-0a748'
+import authorPageInitialPathsC22a1Resource from '../../resources/author-page-initial-paths-c22a1'
+import authorPageInitialPropsA028cResource from '../../resources/author-page-initial-props-a028c'
 
 const Author11 = (props) => {
   return (
@@ -76,7 +76,7 @@ export default Author11
 
 export async function getStaticPaths() {
   try {
-    const response = await authorPageInitialPaths18981Resource({
+    const response = await authorPageInitialPathsC22a1Resource({
       content_type: 'author',
       select: 'fields.name',
     })
@@ -100,7 +100,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   try {
-    const response = await authorPageInitialProps0a748Resource({
+    const response = await authorPageInitialPropsA028cResource({
       ...context?.params,
     })
     if (!response?.data?.[0]) {
