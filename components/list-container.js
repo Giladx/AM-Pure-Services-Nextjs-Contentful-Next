@@ -181,10 +181,6 @@ ul li {
             padding: var(--dl-space-space-twounits);
             font-size: 5em;
           }
-          .list-container-root-class-name {
-            width: 500px;
-            align-self: center;
-          }
 
           @media (max-width: 1600px) {
             .list-container-g-container {

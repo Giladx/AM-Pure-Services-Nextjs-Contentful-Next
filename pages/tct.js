@@ -2,7 +2,6 @@ import React from 'react'
 import Head from 'next/head'
 
 import Navigation from '../components/navigation'
-import ListContainer from '../components/list-container'
 import Blog from '../components/blog'
 import Banner from '../components/banner'
 import Footer from '../components/footer'
@@ -31,6 +30,7 @@ const TCT = (props) => {
             property="og:image"
             content="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/2ebd7c56-845b-432a-9ccd-239e62f0733d/9b2dfd80-db34-45ba-a7c4-c1045c6ffc8a?org_if_sml=1&amp;force_format=original"
           />
+          <meta name="robots" content="noindex" />
         </Head>
         <Navigation></Navigation>
         <main className="tct-main">
@@ -39,7 +39,6 @@ const TCT = (props) => {
               <span className="tct-text">UV Light</span>
             </div>
           </div>
-          <ListContainer rootClassName="list-container-root-class-name"></ListContainer>
           <div className="tct-content">
             <div className="tct-content-wrap">
               <img alt="image" src="/ultra-violet.svg" className="tct-image" />

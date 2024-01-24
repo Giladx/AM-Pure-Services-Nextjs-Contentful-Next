@@ -31,6 +31,7 @@ const AirDuctCleaning = (props) => {
             property="og:image"
             content="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/2ebd7c56-845b-432a-9ccd-239e62f0733d/9b2dfd80-db34-45ba-a7c4-c1045c6ffc8a?org_if_sml=1&amp;force_format=original"
           />
+          <meta name="robots" content="noindex" />
         </Head>
         <Navigation></Navigation>
         <main className="air-duct-cleaning-main">

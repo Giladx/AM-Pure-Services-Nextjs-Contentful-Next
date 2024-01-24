@@ -7,7 +7,7 @@ import ListContainer from '../components/list-container'
 import Packages from '../components/packages'
 import AboutUs from '../components/about-us'
 import Process from '../components/process'
-import Blog from '../components/blog'
+import BlogCMS from '../components/blog-cms'
 import Banner from '../components/banner'
 import Footer from '../components/footer'
 
@@ -188,7 +188,7 @@ const Home = (props) => {
             rootClassName="about-us-root-class-name"
           ></AboutUs>
           <Process></Process>
-          <Blog rootClassName="blog-root-class-name2"></Blog>
+          <BlogCMS rootClassName="blog-cms-root-class-name"></BlogCMS>
           <Banner rootClassName="banner-root-class-name"></Banner>
         </main>
         <Footer></Footer>

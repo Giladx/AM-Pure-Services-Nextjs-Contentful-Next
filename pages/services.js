@@ -2,7 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 
 import Navigation from '../components/navigation'
-import Blog from '../components/blog'
+import BlogCMS from '../components/blog-cms'
 import Banner from '../components/banner'
 import Footer from '../components/footer'
 
@@ -41,7 +41,7 @@ const Services = (props) => {
             </span>
           </div>
         </div>
-        <Blog rootClassName="blog-root-class-name5"></Blog>
+        <BlogCMS rootClassName="blog-cms-root-class-name3"></BlogCMS>
         <Banner rootClassName="banner-root-class-name6"></Banner>
         <Footer rootClassName="footer-root-class-name"></Footer>
       </div>

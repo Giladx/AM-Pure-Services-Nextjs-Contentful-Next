@@ -197,6 +197,10 @@ const Navigation = (props) => {
             top: 0px;
             left: 0px;
           }
+          .navigation-root-class-name8 {
+            top: 0px;
+            left: 0px;
+          }
           @media (max-width: 1600px) {
             .navigation-max-width {
               width: 100%;

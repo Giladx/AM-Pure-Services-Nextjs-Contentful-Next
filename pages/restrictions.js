@@ -2,7 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 
 import Navigation from '../components/navigation'
-import Blog from '../components/blog'
+import BlogCMS from '../components/blog-cms'
 import Banner from '../components/banner'
 import Footer from '../components/footer'
 
@@ -230,7 +230,7 @@ const Restrictions = (props) => {
               </span>
             </div>
           </div>
-          <Blog rootClassName="blog-root-class-name"></Blog>
+          <BlogCMS rootClassName="blog-cms-root-class-name2"></BlogCMS>
         </main>
         <Banner rootClassName="banner-root-class-name2"></Banner>
         <Footer></Footer>

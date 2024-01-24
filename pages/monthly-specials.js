@@ -3,7 +3,7 @@ import Head from 'next/head'
 
 import Navigation from '../components/navigation'
 import Packages from '../components/packages'
-import Blog from '../components/blog'
+import BlogCMS from '../components/blog-cms'
 import Banner from '../components/banner'
 import Footer from '../components/footer'
 
@@ -45,7 +45,7 @@ const MonthlySpecials = (props) => {
             <span className="monthly-specials-text3">SPECIALS</span>
           </div>
           <Packages rootClassName="packages-root-class-name"></Packages>
-          <Blog rootClassName="blog-root-class-name1"></Blog>
+          <BlogCMS rootClassName="blog-cms-root-class-name1"></BlogCMS>
           <Banner rootClassName="banner-root-class-name3"></Banner>
         </main>
         <Footer></Footer>

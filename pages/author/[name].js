@@ -4,16 +4,16 @@ import Head from 'next/head'
 import { DataProvider, Repeater } from '@teleporthq/react-components'
 import PropTypes from 'prop-types'
 
-import authorPageInitialPathsEb03eResource from '../../../resources/author-page-initial-paths-eb03e'
-import authorPageInitialProps6f690Resource from '../../../resources/author-page-initial-props-6f690'
+import authorPageInitialPaths18981Resource from '../../resources/author-page-initial-paths-18981'
+import authorPageInitialProps0a748Resource from '../../resources/author-page-initial-props-0a748'
 
-const Author1 = (props) => {
+const Author11 = (props) => {
   return (
     <>
-      <div className="author1-container">
+      <div className="author11-container">
         <Head>
           <title>
-            Author - AM Pure Services | Airduct Cleaning | Drayer Vent Cleaning
+            Author1 - AM Pure Services | Airduct Cleaning | Drayer Vent Cleaning
           </title>
           <meta
             name="description"
@@ -21,7 +21,7 @@ const Author1 = (props) => {
           />
           <meta
             property="og:title"
-            content="Author - AM Pure Services | Airduct Cleaning | Drayer Vent Cleaning"
+            content="Author1 - AM Pure Services | Airduct Cleaning | Drayer Vent Cleaning"
           />
           <meta
             property="og:description"
@@ -29,30 +29,22 @@ const Author1 = (props) => {
           />
         </Head>
         <DataProvider
-          renderSuccess={(params) => (
+          renderSuccess={(AuthorEntity) => (
             <>
-              <Repeater
-                items={params}
-                renderItem={(AuthorEntities) => (
-                  <>
-                    <div className="author1-container1">
-                      <h1>{AuthorEntities?.name}</h1>
-                      <span>{AuthorEntities?.name}</span>
-                      <span>{AuthorEntities?.id}</span>
-                    </div>
-                  </>
-                )}
-              />
+              <div className="author11-container1">
+                <h1>{AuthorEntity?.name}</h1>
+                <span>{AuthorEntity?.id}</span>
+              </div>
             </>
           )}
-          initialData={props.authorEntities}
+          initialData={props.authorEntity}
           persistDataDuringLoading={true}
-          key={props?.pagination?.page}
+          key={props?.authorEntity?.name}
         />
       </div>
       <style jsx>
         {`
-          .author1-container {
+          .author11-container {
             width: 100%;
             display: flex;
             overflow: auto;
@@ -60,11 +52,10 @@ const Author1 = (props) => {
             align-items: center;
             flex-direction: column;
           }
-          .author1-container1 {
+          .author11-container1 {
             gap: 12px;
             width: 100%;
             display: flex;
-            align-items: center;
             flex-direction: column;
           }
         `}
@@ -73,34 +64,30 @@ const Author1 = (props) => {
   )
 }
 
-Author1.defaultProps = {
-  authorEntities: [],
+Author11.defaultProps = {
+  authorEntity: [],
 }
 
-Author1.propTypes = {
-  authorEntities: PropTypes.array,
+Author11.propTypes = {
+  authorEntity: PropTypes.array,
 }
 
-export default Author1
+export default Author11
 
 export async function getStaticPaths() {
   try {
-    const response = await authorPageInitialPathsEb03eResource({
+    const response = await authorPageInitialPaths18981Resource({
       content_type: 'author',
+      select: 'fields.name',
     })
-    const totalCount = response?.meta?.pagination?.total
-    const pagesCount = Math.ceil(totalCount / 10)
     return {
-      paths: Array.from(
-        {
-          length: pagesCount,
-        },
-        (_, i) => ({
+      paths: (response?.data || []).map((item) => {
+        return {
           params: {
-            page: (i + 1).toString(),
+            name: (item?.fields?.name).toString(),
           },
-        })
-      ),
+        }
+      }),
       fallback: 'blocking',
     }
   } catch (error) {
@@ -113,21 +100,19 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   try {
-    const response = await authorPageInitialProps6f690Resource({
+    const response = await authorPageInitialProps0a748Resource({
       ...context?.params,
-      skip: (context.params.page - 1) * 10,
     })
-    if (!response) {
+    if (!response?.data?.[0]) {
       return {
         notFound: true,
       }
     }
     return {
       props: {
-        authorEntities: response,
+        authorEntity: response?.data?.[0],
         ...response?.meta,
       },
-      revalidate: 60,
     }
   } catch (error) {
     return {

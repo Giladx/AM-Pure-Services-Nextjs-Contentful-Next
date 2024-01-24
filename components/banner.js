@@ -114,6 +114,10 @@ const Banner = (props) => {
           .banner-root-class-name17 {
             width: 100%;
           }
+          .banner-root-class-name18 {
+            width: 100%;
+            align-self: center;
+          }
           @media (max-width: 1200px) {
             .banner-banner {
               width: 100%;
@@ -130,6 +134,9 @@ const Banner = (props) => {
               font-weight: 900;
             }
             .banner-root-class-name {
+              width: 100%;
+            }
+            .banner-root-class-name18 {
               width: 100%;
             }
           }

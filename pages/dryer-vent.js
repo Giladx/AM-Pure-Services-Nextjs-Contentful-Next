@@ -2,7 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 
 import Navigation from '../components/navigation'
-import Blog from '../components/blog'
+import BlogCMS from '../components/blog-cms'
 import Banner from '../components/banner'
 import Footer from '../components/footer'
 
@@ -31,6 +31,7 @@ const DryerVent = (props) => {
             property="og:image"
             content="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/2ebd7c56-845b-432a-9ccd-239e62f0733d/9b2dfd80-db34-45ba-a7c4-c1045c6ffc8a?org_if_sml=1&amp;force_format=original"
           />
+          <meta name="robots" content="noindex" />
         </Head>
         <Navigation></Navigation>
         <main className="dryer-vent-main">
@@ -153,7 +154,7 @@ const DryerVent = (props) => {
               </span>
             </div>
           </div>
-          <Blog rootClassName="blog-root-class-name3"></Blog>
+          <BlogCMS></BlogCMS>
           <Banner rootClassName="banner-root-class-name11"></Banner>
         </main>
         <Footer></Footer>

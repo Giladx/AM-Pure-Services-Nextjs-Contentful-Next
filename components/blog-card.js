@@ -79,6 +79,12 @@ const BlogCard = (props) => {
             .blog-card-root-class-name14 {
               height: auto;
             }
+            .blog-card-root-class-name17 {
+              height: auto;
+            }
+            .blog-card-root-class-name21 {
+              height: auto;
+            }
           }
           @media (max-width: 991px) {
             .blog-card-blog-card {
@@ -123,6 +129,18 @@ const BlogCard = (props) => {
               margin-bottom: var(--dl-space-space-twounits);
             }
             .blog-card-root-class-name13 {
+              margin-bottom: var(--dl-space-space-twounits);
+            }
+            .blog-card-root-class-name15 {
+              margin-bottom: var(--dl-space-space-twounits);
+            }
+            .blog-card-root-class-name16 {
+              margin-bottom: var(--dl-space-space-twounits);
+            }
+            .blog-card-root-class-name18 {
+              margin-bottom: var(--dl-space-space-twounits);
+            }
+            .blog-card-root-class-name20 {
               margin-bottom: var(--dl-space-space-twounits);
             }
           }
