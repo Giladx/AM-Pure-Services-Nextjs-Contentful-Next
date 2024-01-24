@@ -6,8 +6,8 @@ export default async function handler(req, res) {
       switch (contentType) {
         case 'post': {
           try {
-            await res.revalidate(`/services/${data.slug}`)
-            await res.revalidate(`/services`)
+            await res.revalidate(`/post/${data.slug}`)
+            await res.revalidate(`/posts`)
           } catch (error) {
             console.log('Failed in clearing cache')
             console.log(error)

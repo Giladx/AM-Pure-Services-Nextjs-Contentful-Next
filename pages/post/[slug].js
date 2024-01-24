@@ -9,25 +9,20 @@ import Navigation from '../../components/navigation'
 import Blog from '../../components/blog'
 import Banner from '../../components/banner'
 import Footer from '../../components/footer'
-import postPageInitialPaths3a040Resource from '../../resources/post-page-initial-paths-3a040'
-import postPageInitialProps37a06Resource from '../../resources/post-page-initial-props-37a06'
+import postPageInitialPaths9780cResource from '../../resources/post-page-initial-paths-9780c'
+import postPageInitialPropsF6ff3Resource from '../../resources/post-page-initial-props-f6ff3'
 
 const Post = (props) => {
   return (
     <>
       <div className="post-container">
         <Head>
-          <title>
-            Post - AM Pure Services | Airduct Cleaning | Drayer Vent Cleaning
-          </title>
+          <title>AM Pure Services</title>
           <meta
             name="description"
             content="Pure Services | Professional Airduct Cleaning Service | HVAC Systems | A/C Systems | Air Duct Cleaning | Drayer Vent Cleaning | Best Airduct"
           />
-          <meta
-            property="og:title"
-            content="Post - AM Pure Services | Airduct Cleaning | Drayer Vent Cleaning"
-          />
+          <meta property="og:title" content="AM Pure Services" />
           <meta
             property="og:description"
             content="Pure Services | Professional Airduct Cleaning Service | HVAC Systems | A/C Systems | Air Duct Cleaning | Drayer Vent Cleaning | Best Airduct"
@@ -192,7 +187,7 @@ export default Post
 
 export async function getStaticPaths() {
   try {
-    const response = await postPageInitialPaths3a040Resource({
+    const response = await postPageInitialPaths9780cResource({
       content_type: 'post',
       select: 'fields.slug',
     })
@@ -216,7 +211,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   try {
-    const response = await postPageInitialProps37a06Resource({
+    const response = await postPageInitialPropsF6ff3Resource({
       ...context?.params,
     })
     if (!response?.data?.[0]) {
