@@ -280,7 +280,7 @@ const Navigation = (props) => {
           }
           @media (max-width: 479px) {
             .navigation-image {
-              width: 140px;
+              width: 145px;
               height: auto;
             }
             .navigation-register {

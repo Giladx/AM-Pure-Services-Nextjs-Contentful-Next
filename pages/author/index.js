@@ -4,7 +4,7 @@ import Head from 'next/head'
 import { DataProvider, Repeater } from '@teleporthq/react-components'
 import PropTypes from 'prop-types'
 
-import authorPageInitialProps59430Resource from '../../resources/author-page-initial-props-59430'
+import authorPageInitialProps09364Resource from '../../resources/author-page-initial-props-09364'
 
 const Author = (props) => {
   return (
@@ -84,7 +84,7 @@ export default Author
 
 export async function getStaticProps(context) {
   try {
-    const response = await authorPageInitialProps59430Resource({
+    const response = await authorPageInitialProps09364Resource({
       ...context?.params,
     })
     if (!response) {

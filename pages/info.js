@@ -35,7 +35,13 @@ const Info = (props) => {
             <span>But you can always make yourself a sandcastle!</span>
             <br></br>
           </h1>
-          <img alt="image" src="/fun1-1500w.gif" className="info-image" />
+          <img
+            alt="image"
+            sizes="(min-width: 992px) 1200px, (min-width: 768px) 800px, 480px"
+            src="/fun1-1500w.gif"
+            srcSet="/fun1-1500w.gif 1200w, /fun1-tablet.gif 800w, /fun1-mobile.gif 480w"
+            className="info-image"
+          />
           <button id="backButton" type="button" className="info-button button">
             <span className="info-text5">Try Again</span>
           </button>

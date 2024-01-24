@@ -35,14 +35,17 @@ const BlogCMS = (props) => {
               <>
                 <Repeater
                   items={params}
-                  renderItem={(context_crvlg) => (
+                  renderItem={(context_sp2aum) => (
                     <>
-                      <Link href={`/post/${context_crvlg?.slug}`}>
+                      <Link href={`/post/${context_sp2aum?.slug}`}>
                         <a>
                           <div className="blog-cms-blog-card">
                             <img
-                              alt={props.imagealt}
-                              src={context_crvlg?.coverImage?.url}
+                              alt="clean air duct"
+                              src={
+                                context_sp2aum?.coverImage?.url ||
+                                'https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/2ebd7c56-845b-432a-9ccd-239e62f0733d/dbcd9cd3-bed8-454a-b81b-2a33e9433078?org_if_sml=1&q=80&force_format=original'
+                              }
                               loading="lazy"
                               className="blog-cms-image"
                             />
@@ -55,14 +58,14 @@ const BlogCMS = (props) => {
                               </button>
                               <span className="blog-cms-text07">
                                 {[0]?.date}
-                                {context_crvlg?.date}
+                                {context_sp2aum?.date}
                               </span>
                             </div>
                             <span className="blog-cms-text08">
-                              {context_crvlg?.title}
                               {[0]?.title}
+                              {context_sp2aum?.title}
                             </span>
-                            <span>{props.text1}</span>
+                            <span>Read More</span>
                           </div>
                         </a>
                       </Link>
@@ -216,7 +219,9 @@ BlogCMS.defaultProps = {
   rootClassName: '',
   imagealt: 'clean air duct',
   text3: 'Next',
+  text5: 'Next',
   text1: 'Read More',
+  text4: 'Previous',
   text2: 'Previous',
 }
 
@@ -225,7 +230,9 @@ BlogCMS.propTypes = {
   rootClassName: PropTypes.string,
   imagealt: PropTypes.string,
   text3: PropTypes.string,
+  text5: PropTypes.string,
   text1: PropTypes.string,
+  text4: PropTypes.string,
   text2: PropTypes.string,
 }
 

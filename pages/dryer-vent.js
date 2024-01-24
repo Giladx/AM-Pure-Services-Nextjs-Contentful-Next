@@ -47,7 +47,9 @@ const DryerVent = (props) => {
             <div className="dryer-vent-content-wrap">
               <img
                 alt="image"
+                sizes="(min-width: 992px) 1200px, (min-width: 768px) 800px, 480px"
                 src="/duct_cleaner-1500w.webp"
+                srcSet="/duct_cleaner-1500w.webp 1200w, /duct_cleaner-tablet.webp 800w, /duct_cleaner-mobile.webp 480w"
                 className="dryer-vent-image"
               />
               <span className="dryer-vent-text03">DRYER VENT CLEANING</span>

@@ -9,8 +9,8 @@ import Navigation from '../../components/navigation'
 import Blog from '../../components/blog'
 import Banner from '../../components/banner'
 import Footer from '../../components/footer'
-import postPageInitialPathsEe62aResource from '../../resources/post-page-initial-paths-ee62a'
-import postPageInitialProps68a92Resource from '../../resources/post-page-initial-props-68a92'
+import postPageInitialPaths6b259Resource from '../../resources/post-page-initial-paths-6b259'
+import postPageInitialProps047feResource from '../../resources/post-page-initial-props-047fe'
 
 const Post = (props) => {
   return (
@@ -169,6 +169,32 @@ const Post = (props) => {
               width: 100%;
             }
           }
+          @media (max-width: 991px) {
+            .post-text {
+              width: 100%;
+              font-size: 38px;
+            }
+          }
+          @media (max-width: 767px) {
+            .post-text {
+              font-size: 28px;
+            }
+            .post-container1 {
+              width: 100%;
+              padding-left: 15px;
+              padding-right: 15px;
+            }
+          }
+          @media (max-width: 479px) {
+            .post-text {
+              font-size: 20px;
+            }
+            .post-container1 {
+              width: 100%;
+              padding-left: 15px;
+              padding-right: 15px;
+            }
+          }
         `}
       </style>
     </>
@@ -187,7 +213,7 @@ export default Post
 
 export async function getStaticPaths() {
   try {
-    const response = await postPageInitialPathsEe62aResource({
+    const response = await postPageInitialPaths6b259Resource({
       content_type: 'post',
       select: 'fields.slug',
     })
@@ -211,7 +237,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   try {
-    const response = await postPageInitialProps68a92Resource({
+    const response = await postPageInitialProps047feResource({
       ...context?.params,
     })
     if (!response?.data?.[0]) {

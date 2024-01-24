@@ -26,6 +26,7 @@ const BlogCard = (props) => {
           .blog-card-blog-card {
             flex: 0 0 auto;
             width: 100%;
+            cursor: pointer;
             display: flex;
             max-width: 300px;
             align-items: flex-start;

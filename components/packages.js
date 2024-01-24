@@ -24,7 +24,7 @@ const Packages = (props) => {
             <div className="packages-controls">
               <button
                 id="slideItLeft"
-                name="slide-left"
+                type="button"
                 aria-label="slide-left"
                 className="control-btn"
               >
@@ -35,7 +35,7 @@ const Packages = (props) => {
               </button>
               <button
                 id="slideItRight"
-                name="slide-right"
+                type="button"
                 aria-label="slide-right"
                 className="control-btn"
               >
@@ -63,7 +63,7 @@ const Packages = (props) => {
                   title="Premium"
                   details="Vacuum up to 12 supply vents "
                   details1="Camera inspection"
-                  imageSrc="/file-document-200h.png"
+                  imageSrc="/file-document-200h.webp"
                   className="packages-component1"
                 ></PackagesCard>
               </a>
@@ -77,7 +77,7 @@ const Packages = (props) => {
                   details="Negative pressure connection to the main supply line and main return line. "
                   details1="Dryer vent cleaning from outside (1st-floor exit only) "
                   details11="Basic furnace cleaning"
-                  imageSrc="/dice-5-200h.png"
+                  imageSrc="/dice-5-200h.webp"
                   details1111="Camera inspection"
                   className="packages-component2"
                 ></PackagesCard>
@@ -92,7 +92,7 @@ const Packages = (props) => {
                   details="Negative pressure connection to the main supply line and main return line. "
                   details1="Dryer vent cleaning from outside (1st-floor exit only) "
                   details11="Basic furnace cleaning -Camera inspection"
-                  imageSrc="/dice-5-200h.png"
+                  imageSrc="/dice-5-200h.webp"
                   details111="Deep cleaning vents and returns "
                   details1111="Camera inspection"
                   className="packages-component3"
@@ -105,13 +105,13 @@ const Packages = (props) => {
           <div className="packages-container1">
             <Script
               html={`<script>
-const buttonRight = document.getElementById('slideItRight');
-    const buttonLeft = document.getElementById('slideItLeft');
+    const buttontoRight = document.getElementById('slideItRight');
+    const buttontoLeft = document.getElementById('slideItLeft');
 
-    buttonRight.onclick = function () {
+    buttontoRight.onclick = function () {
       document.getElementById('items').scrollLeft += 300;
     };
-    buttonLeft.onclick = function () {
+    buttontoLeft.onclick = function () {
       document.getElementById('items').scrollLeft -= 300;
     };
 </script>`}

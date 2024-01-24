@@ -276,27 +276,27 @@ ul li {
             }
             .list-container-text {
               width: 360px;
-              font-size: 2.6em;
+              font-size: 2.1em;
             }
             .list-container-text1 {
               width: 360px;
-              font-size: 2.6em;
+              font-size: 2.1em;
             }
             .list-container-heading {
               width: 360px;
-              font-size: 2.6em;
+              font-size: 2.1em;
             }
             .list-container-heading1 {
               width: 360px;
-              font-size: 2.6em;
+              font-size: 2.1em;
             }
             .list-container-heading2 {
               width: 360px;
-              font-size: 2.6em;
+              font-size: 2.1em;
             }
             .list-container-text2 {
               width: 360px;
-              font-size: 2.6em;
+              font-size: 2.1em;
             }
           }
         `}

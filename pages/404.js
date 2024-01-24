@@ -27,7 +27,13 @@ const Page = (props) => {
             content="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/2ebd7c56-845b-432a-9ccd-239e62f0733d/9b2dfd80-db34-45ba-a7c4-c1045c6ffc8a?org_if_sml=1&amp;force_format=original"
           />
         </Head>
-        <img alt="image" src="/404-800w.gif" className="page-image" />
+        <img
+          alt="image"
+          sizes="(min-width: 768px) 800px, 480px"
+          src="/404-800w.gif"
+          srcSet="/404-800w.gif 800w, /404-mobile.gif 480w"
+          className="page-image"
+        />
         <span className="page-text">Page Not Found</span>
         <Link href="/">
           <a className="page-link">

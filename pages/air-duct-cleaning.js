@@ -47,7 +47,9 @@ const AirDuctCleaning = (props) => {
             <div className="air-duct-cleaning-content-wrap">
               <img
                 alt="image"
+                sizes="(min-width: 992px) 1200px, (min-width: 768px) 800px, 480px"
                 src="/air_duct-1500w.webp"
+                srcSet="/air_duct-1500w.webp 1200w, /air_duct-tablet.webp 800w, /air_duct-mobile.webp 480w"
                 className="air-duct-cleaning-image"
               />
               <span className="air-duct-cleaning-text003">
@@ -152,7 +154,9 @@ const AirDuctCleaning = (props) => {
               </span>
               <img
                 alt="image"
+                sizes="(min-width: 992px) 1200px, (min-width: 768px) 800px, 480px"
                 src="/vent_tech-1500w.webp"
+                srcSet="/vent_tech-1500w.webp 1200w, /vent_tech-tablet.webp 800w, /vent_tech-mobile.webp 480w"
                 className="air-duct-cleaning-image1"
               />
               <span className="air-duct-cleaning-text027">
@@ -201,7 +205,9 @@ const AirDuctCleaning = (props) => {
               </span>
               <img
                 alt="image"
+                sizes="(min-width: 992px) 1200px, (min-width: 768px) 800px, 480px"
                 src="/air_ducts-1500w.webp"
+                srcSet="/air_ducts-1500w.webp 1200w, /air_ducts-tablet.webp 800w, /air_ducts-mobile.webp 480w"
                 className="air-duct-cleaning-image2"
               />
               <span className="air-duct-cleaning-text039">

@@ -55,7 +55,7 @@ const Home = (props) => {
               <div className="home-container1">
                 <img
                   alt="image"
-                  src="/elite-solid-border-1100w.webp"
+                  src="/elite-solid-border-500w.webp"
                   width="162"
                   height="160"
                   loading="lazy"
@@ -64,7 +64,7 @@ const Home = (props) => {
                 />
                 <img
                   alt="image"
-                  src="/soap-solid-border-1100w.webp"
+                  src="/soap-solid-border-500w.webp"
                   width="160"
                   height="146"
                   loading="lazy"
@@ -73,7 +73,7 @@ const Home = (props) => {
                 />
                 <img
                   alt="image"
-                  src="/toprated-solid-border-1100w.webp"
+                  src="/toprated-solid-border-500w.webp"
                   width="162"
                   height="160"
                   loading="lazy"
@@ -87,8 +87,10 @@ const Home = (props) => {
             <div data-aos="fade-up" className="home-image3">
               <img
                 alt="image"
+                sizes="(min-width: 992px) 1200px, (min-width: 768px) 800px, 480px"
                 src="/undraw_absorbed_in_re_ymd6-1500w-1500w.webp"
                 loading="lazy"
+                srcSet="/undraw_absorbed_in_re_ymd6-1500w-1500w.webp 1200w, /undraw_absorbed_in_re_ymd6-1500w-tablet.webp 800w, /undraw_absorbed_in_re_ymd6-1500w-mobile.webp 480w"
                 className="home-image4"
               />
             </div>
@@ -631,19 +633,22 @@ const Home = (props) => {
               width: 100%;
             }
             .home-image {
-              width: 70%;
-              margin-left: 0px;
-              margin-right: 0px;
+              width: 30%;
+              height: auto;
+              margin-left: var(--dl-space-space-halfunit);
+              margin-right: var(--dl-space-space-halfunit);
             }
             .home-image1 {
-              width: 70%;
+              width: 30%;
+              height: auto;
               margin-left: 0px;
               margin-right: 0px;
             }
             .home-image2 {
-              width: 70%;
-              margin-left: 0px;
-              margin-right: 0px;
+              width: 30%;
+              height: auto;
+              margin-left: var(--dl-space-space-halfunit);
+              margin-right: var(--dl-space-space-halfunit);
             }
             .home-content {
               height: auto;
