@@ -8,8 +8,8 @@ import PropTypes from 'prop-types'
 import Navigation from '../../../components/navigation'
 import Banner from '../../../components/banner'
 import Footer from '../../../components/footer'
-import postPageInitialPaths7c0eaResource from '../../../resources/post-page-initial-paths-7c0ea'
-import postPageInitialProps5a6b1Resource from '../../../resources/post-page-initial-props-5a6b1'
+import postPageInitialPathsBdf89Resource from '../../../resources/post-page-initial-paths-bdf89'
+import postPageInitialProps71eaeResource from '../../../resources/post-page-initial-props-71eae'
 
 const Post11 = (props) => {
   return (
@@ -283,11 +283,11 @@ export default Post11
 
 export async function getStaticPaths() {
   try {
-    const response = await postPageInitialPaths7c0eaResource({
+    const response = await postPageInitialPathsBdf89Resource({
       content_type: 'post',
     })
     const totalCount = response?.meta?.pagination?.total
-    const pagesCount = Math.ceil(totalCount / 9)
+    const pagesCount = Math.ceil(totalCount / 10)
     return {
       paths: Array.from(
         {
@@ -311,9 +311,9 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   try {
-    const response = await postPageInitialProps5a6b1Resource({
+    const response = await postPageInitialProps71eaeResource({
       ...context?.params,
-      skip: (context.params.page - 1) * 9,
+      skip: (context.params.page - 1) * 10,
     })
     if (!response) {
       return {

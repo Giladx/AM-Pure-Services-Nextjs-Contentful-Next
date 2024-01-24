@@ -188,7 +188,6 @@ const BlogCMS = (props) => {
             .blog-cms-container2 {
               width: 100%;
               padding: 15px;
-              padding-top: 15px;
             }
             .blog-cms-blog-card {
               max-width: auto;
