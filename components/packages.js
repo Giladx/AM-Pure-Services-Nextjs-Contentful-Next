@@ -23,7 +23,7 @@ const Packages = (props) => {
             </div>
             <div className="packages-controls">
               <button
-                id="slideLeft"
+                id="slideItLeft"
                 name="slide-left"
                 aria-label="slide-left"
                 className="control-btn"
@@ -34,7 +34,7 @@ const Packages = (props) => {
                 {props.buttonLeft}
               </button>
               <button
-                id="slideRight"
+                id="slideItRight"
                 name="slide-right"
                 aria-label="slide-right"
                 className="control-btn"
@@ -109,8 +109,8 @@ const Packages = (props) => {
           <div className="packages-container1">
             <Script
               html={`<script>
-const buttonRight = document.getElementById('slideRight');
-    const buttonLeft = document.getElementById('slideLeft');
+const buttonRight = document.getElementById('slideItRight');
+    const buttonLeft = document.getElementById('slideItLeft');
 
     buttonRight.onclick = function () {
       document.getElementById('items').scrollLeft += 300;

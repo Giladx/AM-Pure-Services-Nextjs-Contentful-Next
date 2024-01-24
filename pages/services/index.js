@@ -8,7 +8,7 @@ import PropTypes from 'prop-types'
 import Navigation from '../../components/navigation'
 import Banner from '../../components/banner'
 import Footer from '../../components/footer'
-import servicePageInitialPropsBc7f7Resource from '../../resources/service-page-initial-props-bc7f7'
+import servicePageInitialPropsB263dResource from '../../resources/service-page-initial-props-b263d'
 
 const Service = (props) => {
   return (
@@ -282,7 +282,7 @@ export default Service
 
 export async function getStaticProps(context) {
   try {
-    const response = await servicePageInitialPropsBc7f7Resource({
+    const response = await servicePageInitialPropsB263dResource({
       ...context?.params,
     })
     if (!response) {
